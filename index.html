@@ -1,11 +1,19 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spark Creative Lab — Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Spark Creative Lab – Portfolio</title>
+
+  <!-- Preload SOLO della prima immagine -->
+  <link rel="preload" as="image" href="./PORTFOLIOparte1.jpg">
+
   <style>
-    :root { color-scheme: dark; }
+    :root {
+      color-scheme: dark;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
@@ -13,17 +21,17 @@
       overflow-x: hidden;
     }
 
-    /* Contenitore full-width su mobile, centrato su desktop */
+    /* Contenitore */
     .wrap {
-      width: 100vw;
+      width: 100%;
       margin: 0;
       padding: 0;
     }
 
-    /* Le immagini occupano tutta la larghezza dello schermo */
+    /* Immagini full width */
     .wrap img {
       display: block;
-      width: 100vw;      /* schermo intero */
+      width: 100%;
       height: auto;
       margin: 0;
       padding: 0;
@@ -33,11 +41,41 @@
 
 <body>
   <div class="wrap">
-    <img src="./PORTFOLIOparte1.jpg" alt="Portfolio 1" loading="lazy" decoding="async">
-<img src="./PORTFOLIOparte2.jpg" alt="Portfolio 2" loading="lazy" decoding="async">
-<img src="./PORTFOLIOparte3.jpg" alt="Portfolio 3" loading="lazy" decoding="async">
-<img src="./PORTFOLIOparte4.jpg" alt="Portfolio 4" loading="lazy" decoding="async">
-<img src="./PORTFOLIOparte5.jpg" alt="Portfolio 5" loading="lazy" decoding="async">
+    <img
+      src="./PORTFOLIOparte1.jpg"
+      alt="Portfolio 1"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    >
+
+    <img
+      src="./PORTFOLIOparte2.jpg"
+      alt="Portfolio 2"
+      loading="lazy"
+      decoding="async"
+    >
+
+    <img
+      src="./PORTFOLIOparte3.jpg"
+      alt="Portfolio 3"
+      loading="lazy"
+      decoding="async"
+    >
+
+    <img
+      src="./PORTFOLIOparte4.jpg"
+      alt="Portfolio 4"
+      loading="lazy"
+      decoding="async"
+    >
+
+    <img
+      src="./PORTFOLIOparte5.jpg"
+      alt="Portfolio 5"
+      loading="lazy"
+      decoding="async"
+    >
   </div>
 </body>
 </html>
